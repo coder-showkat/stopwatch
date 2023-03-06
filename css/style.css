@@ -13,7 +13,7 @@
 }
 
 .stopwatch {
-  width: fit-content;
+  width: 480px;
   margin: auto;
   background-color: rgb(109, 109, 109);
   padding: 3rem;
@@ -68,7 +68,7 @@
 
 .lap-container {
   background-color: #eee;
-  padding: 1rem 0.5rem 1rem 2rem;
+  padding: 2rem 0.5rem 2rem 2rem;
   border-radius: 0.5rem;
 }
 
@@ -79,6 +79,9 @@
 .lap-section {
   height: 250px;
   overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .lap-lists {
@@ -86,6 +89,17 @@
   font-size: 1.2rem;
   color: rgb(21, 21, 21);
   font-weight: 600;
+}
+
+#lap-lists1 {
+  list-style: decimal;
+  color: rgb(87, 84, 84);
+}
+
+#lap-lists1 li::before {
+  content: "+";
+  margin-right: 4px;
+  font-weight: 400;
 }
 
 .lap-lists li {
