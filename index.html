@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
+    <!-- font-awesome kit -->
+    <script src="https://kit.fontawesome.com/efa78af784.js" crossorigin="anonymous"></script>
 
+    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,10 +21,10 @@
             </div>
 
             <div class="btn-section">
-                <button class="btnStart" onclick="startTiming()">Start</button>
-                <button class="btnStop hidden">Stop</button>
-                <button class="btnReset hidden">Reset</button>
-                <button class="btnLap hidden">Lap</button>
+                <button class="btnReset hidden"><i class="fa-solid fa-stop"></i></button>
+                <button class="btnLap hidden"><i class="fa-solid fa-flag"></i></button>
+                <button class="btnStop hidden"><i class="fa-solid fa-pause"></i></button>
+                <button class="btnStart" onclick="startTiming()"><i class="fa-solid fa-play"></i></button>
             </div>
             <div class="lap-container">
                 <div class="lap-section">
@@ -32,6 +35,8 @@
         </div>
     </div>
 
+
+    <!-- custom js -->
     <script src="js/app.js"></script>
 </body>
 

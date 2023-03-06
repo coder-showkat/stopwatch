@@ -41,7 +41,9 @@ const setIntervalFunc = () => {
         btnStop.addEventListener('click', () => {
             clearInterval(timing);
             btnStart.classList.remove('hidden');
+            btnReset.classList.remove('hidden');
             btnStop.classList.add('hidden');
+            btnLap.classList.add('hidden');
         })
 
         // time reset time 
@@ -65,8 +67,8 @@ function startTiming() {
 
     btnStart.classList.add('hidden');
     btnStop.classList.remove('hidden');
-    btnReset.classList.remove('hidden');
     btnLap.classList.remove('hidden');
+    btnReset.classList.add('hidden');
 }
 
 
