@@ -6,11 +6,13 @@ const btnReset = document.querySelector('.btnReset');
 const btnLap = document.querySelector('.btnLap');
 const lapLists1 = document.querySelector('#lap-lists1');
 const lapLists2 = document.querySelector('#lap-lists2');
+const lapLists3 = document.querySelector('#lap-lists3');
 
 
 // variable
 let count = 0;
 let previousLap = 0;
+let listCount = 0;
 
 
 // time conversion function
@@ -52,8 +54,10 @@ const setIntervalFunc = () => {
             displayTime.innerText = `00:00:00:00`;
             count = 0;
             previousLap = 0;
+            listCount = 0;
             lapLists1.innerHTML = '';
             lapLists2.innerHTML = '';
+            lapLists3.innerHTML = '';
             btnReset.classList.add('hidden');
             btnStop.classList.add('hidden');
             btnLap.classList.add('hidden');
@@ -73,14 +77,17 @@ function startTiming() {
 
 
 btnLap.addEventListener('click', ()=>{
-
+    listCount++;
     const li1 = document.createElement('li');
-    li1.innerText = timeConversion(count - previousLap);
-    lapLists1.appendChild(li1);
-
+    li1.innerHTML = `<i class="fa-solid fa-flag"></i> ${String(listCount).length < 2 ? `0${listCount}`:listCount}`;
+    lapLists1.insertBefore(li1, lapLists1.children[0]);
     const li2 = document.createElement('li');
-    li2.innerText = timeConversion(count);
-    lapLists2.appendChild(li2);
+    li2.innerText = timeConversion(count - previousLap);
+    lapLists2.insertBefore(li2, lapLists2.children[0]);
+
+    const li3 = document.createElement('li');
+    li3.innerText = timeConversion(count);
+    lapLists3.insertBefore(li3, lapLists3.children[0]);
     previousLap = count;
 })
 

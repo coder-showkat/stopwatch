@@ -15,6 +15,8 @@
 .stopwatch {
   width: 480px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(109, 109, 109);
   padding: 3rem;
   display: flex;
@@ -69,30 +71,29 @@
   height: 250px;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 0.6fr repeat(2, 1fr);
   gap: 1rem;
 }
 
 .lap-lists {
   list-style: none;
-  font-size: 1.2rem;
   color: rgb(21, 21, 21);
   font-weight: 600;
 }
 
-#lap-lists1 {
-  list-style: decimal;
+#lap-lists1,
+#lap-lists2 {
   color: rgb(87, 84, 84);
 }
 
-#lap-lists1 li::before {
+#lap-lists2 li::before {
   content: "+";
   margin-right: 4px;
   font-weight: 400;
 }
 
 .lap-lists li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -101,13 +102,24 @@
     background-color: rgb(109, 109, 109);
     overflow: hidden;
   }
-  .time-section {
-    padding: 1rem;
-  }
 
   .stopwatch {
     width: 100%;
     padding: 1rem;
+  }
+
+  .time-section {
+    padding: 1rem;
+    order: 1;
+  }
+
+  .lap-container {
+    order: 2;
+  }
+
+  .btn-section {
+    order: 3;
+    margin-top: 1rem;
   }
 }
 
