@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stopwatch {
+  width: fit-content;
+  margin: auto;
+  background-color: rgb(109, 109, 109);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.time-section {
+  padding: 2rem;
+  background-color: rgb(255, 174, 0);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.time-section h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-section button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  color: rgb(37, 36, 36);
+}
+
+.btn-section button:active {
+  transform: scale(90%);
+}
+
+.btnStart {
+  background-color: rgb(9, 247, 9);
+}
+
+.btnStop {
+  background-color: orangered;
+}
+
+.btnReset {
+  background-color: yellow;
+}
+
+.lap-container {
+  background-color: #eee;
+  padding: 1rem 0.5rem 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.btnLap {
+  background-color: rgb(109, 109, 255);
+}
+
+.lap-section {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.lap-lists {
+  list-style: none;
+  font-size: 1.2rem;
+  color: rgb(21, 21, 21);
+  font-weight: 600;
+}
+
+.lap-lists li {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    height: 100vh;
+    background-color: rgb(109, 109, 109);
+    overflow: hidden;
+  }
+  .time-section {
+    padding: 1rem;
+  }
+
+  .stopwatch {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .btn-section button {
+    font-size: 1rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (hover: none) {
+  button {
+    cursor: auto !important;
+  }
+
+  button:active {
+    transform: scale(90%);
+  }
+}
